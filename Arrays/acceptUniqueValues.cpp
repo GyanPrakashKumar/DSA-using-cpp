@@ -23,6 +23,6 @@ int main()
     cout << "\nArray elements are: \n";
     for (int i = 0; i < MAX; i++)
     {
-        cout << arr[i] << "\t";
+        cout << arr[i] << " ";
     }
 }
