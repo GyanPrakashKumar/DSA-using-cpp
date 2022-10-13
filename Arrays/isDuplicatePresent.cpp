@@ -4,27 +4,27 @@ using namespace std;
 
 int main()
 {
-    int arr[MAX], j = 0;
-
+    int arr[MAX];
+    cout << "Enter the elements of the array:\n";
     for (int i = 0; i < MAX; i++)
     {
         cout << "Enter element " << i + 1 << ": ";
         cin >> arr[i];
     }
-    cout << "\nArray elements are: \n";
+    int count = 0;
     for (int i = 0; i < MAX; i++)
     {
-        cout << arr[i] << "\t";
-    }
-    cout << "\n Duplicate elements are: \n";
-    for (int i = 0; i < MAX; i++)
-    {
-        for (j = i + 1; j < MAX; j++)
+        for (int j = 0; j < MAX; j++)
         {
             if (arr[i] == arr[j])
             {
-                cout << arr[i] << "\t";
+                count++;
             }
         }
-    }    
+        if (count == 1)
+        {
+            cout << arr[i] << " ";
+        }
+        count = 0;
+    }
 }
